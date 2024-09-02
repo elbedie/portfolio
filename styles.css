@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+/* Mobile-first approach */
+html {
+    font-size: 55%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(120deg, #141414, #1e1e1e, #2a2a2a, #3b3b3b); /* Gradiente mais escuro */
+    color: #f2f2f2; /* Branco suave para o texto */
+    font-size: 1.6rem;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    color: #ff0000; /* Vermelho intenso */
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #f2f2f2; /* Branco suave */
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff0000; /* Vermelho intenso */
+    border-bottom: 3px solid #b3b3b3; /* Cinza claro */
+}
+
+/* Small screens (up to 995px) */
+@media(max-width: 995px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        border-left: 3px solid #ff0000; /* Vermelho */
+        border-bottom: 3px solid #ff0000;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #292929; /* Cinza escuro */
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ff0000;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background: linear-gradient(120deg, #2a2a2a, #1e1e1e); /* Gradiente mais escuro para o conteúdo */
+}
+
+.home .home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ff0000; /* Vermelho */
+}
+
+span {
+    color: #b3b3b3; /* Cinza claro */
+}
+
+.home-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #f2f2f2; /* Branco suave */
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: #f2f2f2;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 80vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #b3b3b3; /* Cinza claro */
+    transition: 0.2s linear;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #ff0000; /* Vermelho */
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #ff0000;
+}
+
+.social-icons a:hover {
+    color: #292929; /* Cinza escuro */
+    transform: scale(1.3) translateY(-5px);
+    background-color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.btn-hire-me {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #292929; /* Cinza escuro */
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ff0000; /* Vermelho */
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #ff0000;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-hire-me:hover {
+    transform: scale3d(1.03);
+    background-color: #ff0000;
+    color: #292929; /* Cinza escuro */
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    color: #f2f2f2; /* Branco suave */
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Software Developer";
+    color: #ff0000; /* Vermelho */
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: #292929; /* Cinza escuro */
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #292929;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #ff0000;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Back-End Developer";
+    }
+    21%, 40% {
+        content: "Developer";
+    }
+    41%, 60% {
+        content: "Web Developer";
+    }
+    61%, 80% {
+        content: "Writer";
+    }
+    80%, 100% {
+        content: "Programming Student";
+    }
+}
+
+/* Large screens adjustments */
+@media(min-width: 1000px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .home {
+        flex-direction: row;
+        gap: 8rem;
+        padding: 5rem 9%;
+    }
+
+    .home .home-content h1 {
+        font-size: 6rem;
+    }
+
+    .home-content h3 {
+        font-size: 4rem;
+    }
+
+    .home-img img {
+        width: 32vw;
+        margin-top: 4rem;
+    }
+}

@@ -31,7 +31,7 @@ To view or modify the project locally, follow these steps:
 
 Here’s a preview of what the project looks like:
 
-![Portfolio Website Screenshot]([img/screenshot.png](https://i.imgur.com/ysc40gP.png))
+![Portfolio Website Screenshot](https://i.imgur.com/ysc40gP.png)
 
 ## 🛠️ Technologies Used
 
